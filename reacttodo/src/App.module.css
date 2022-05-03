@@ -1,0 +1,21 @@
+.wrapperTodo {
+    width: 600px;
+    margin: 0px auto;
+    border: 1px solid #696969;
+    border-radius: 5px;
+    background-color: #FFFFF0; 
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.captionWrapper {
+    border-bottom: 3px solid #696969;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: left;
+    flex-basis: 90%;
+}

@@ -1,0 +1,13 @@
+
+.TasksWrapper {
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    flex-basis: 90%;
+    list-style: none;
+    margin: 0;
+    padding-left: 0px;
+}
