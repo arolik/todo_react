@@ -21,11 +21,13 @@ const todoSlice = createSlice({
         completeTodo(state, action){
             state.todos.allTasks.map((todo) => {
                 if(todo.id === Number(action.payload.id)){
-                    todo.complete = true;
-                    state.todos.completeTasks.push(todo);
+                    todo.complete = !todo.complete;
                 }
                 return todo;
             });
+            state.todos.completeTasks = state.todos.allTasks.filter((t) => {
+                return t.complete === true;
+            })
         }
     }
 })

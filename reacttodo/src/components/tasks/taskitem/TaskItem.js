@@ -14,7 +14,7 @@ function TaskItem (props) {
     // {props.text}
     // </span>
 
-    let textOfTask = props.iscomplete ? 
+    let task = props.iscomplete ? 
         <li className={classes.taskitem} >
             <MarkTask id={props.id} ischecked={props.ischecked} />
             <span className={classes.complete}>
@@ -24,8 +24,8 @@ function TaskItem (props) {
         </li>
      : 
         <li className={classes.taskitem}>
-            <MarkTask id={props.id} />
-            <span >
+            <MarkTask id={props.id} ischecked={props.ischecked} />
+            <span>
                 {props.text}
             </span>
             <TaskHandle />
@@ -36,7 +36,7 @@ function TaskItem (props) {
             //     {textOfTask}
             //     <TaskHandle />
             // </li>
-            textOfTask
+            task
     )
 }
 

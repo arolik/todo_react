@@ -11,8 +11,8 @@ console.log(allTodos);
         <div className={classes.TasksWrapper}>
             <ul>{allTodos.map(function(todo){
                 return todo.complete === true ?
-                <TaskItem key={todo.id} text={todo.text} id={todo.id} iscomplete={true} ischecked={true} /> :
-                <TaskItem key={todo.id} text={todo.text} id={todo.id}  />
+                <TaskItem key={todo.id} text={todo.text} id={todo.id} ischecked={todo.complete} iscomplete={todo.complete} /> :
+                <TaskItem key={todo.id} text={todo.text} id={todo.id} ischecked={todo.complete} />
             })}</ul>
         </div>
     )
