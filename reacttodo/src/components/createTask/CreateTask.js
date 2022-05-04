@@ -23,7 +23,10 @@ function CreateTask () {
     }
 
     function createTask () {
-        dispatch(addTodo({text, newId: id()}))
+        if(text !== ''){
+            dispatch(addTodo({text, newId: id()}));
+        }
+        setNewText('');
     }
 
     return (
