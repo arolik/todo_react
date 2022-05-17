@@ -5,22 +5,14 @@ import classes from './TaskItem.module.css';
 
 
 function TaskItem (props) {
-
-    // let textOfTask = props.iscomplete ? 
-    // <span className={classes.complete}>
-    // {props.text}
-    // </span> : 
-    // <span>
-    // {props.text}
-    // </span>
-
+     
     let task = props.iscomplete ? 
         <li className={classes.taskitem} >
             <MarkTask id={props.id} ischecked={props.ischecked} />
             <span className={classes.complete}>
                 {props.text}
             </span>
-            <TaskHandle />
+            <TaskHandle id={props.id} />
         </li>
      : 
         <li className={classes.taskitem}>
@@ -28,14 +20,9 @@ function TaskItem (props) {
             <span>
                 {props.text}
             </span>
-            <TaskHandle />
+            <TaskHandle id={props.id} />
         </li>
     return (
-            // <li className={classes.taskitem}>
-            //     <MarkTask id={props.id} />
-            //     {textOfTask}
-            //     <TaskHandle />
-            // </li>
             task
     )
 }

@@ -5,11 +5,15 @@ import classes from './AllTasks.module.css';
 
 function AllTasks () {
 
-const allTodos = useSelector(state => state.todos.todos.allTasks);
-console.log(allTodos);
+    const allTodos = useSelector(state => state.todos.todos.allTasks);
+    const activeTodos = allTodos.filter((activetodo) => {
+        return activetodo.delete !== true;
+    });
+    console.log(allTodos);
     return (
+        
         <div className={classes.TasksWrapper}>
-            <ul>{allTodos.map(function(todo){
+            <ul>{activeTodos.map(function(todo){
                 return todo.complete === true ?
                 <TaskItem key={todo.id} text={todo.text} id={todo.id} ischecked={todo.complete} iscomplete={todo.complete} /> :
                 <TaskItem key={todo.id} text={todo.text} id={todo.id} ischecked={todo.complete} />
